@@ -1,0 +1,9 @@
+# Build outputs
+build/
+*.dylib
+*.o
+*.dSYM/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

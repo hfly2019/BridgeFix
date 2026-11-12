@@ -1,0 +1,38 @@
+name: Bug Report
+description: Report an issue or crash during Apple Watch pairing or synchronization
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report an issue!
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: iOS version, iPhone model, Watch model, and watchOS version.
+      placeholder: e.g. iOS 15.0, iPhone XS Max, Apple Watch Series 8 (watchOS 9.1)
+    validations:
+      required: true
+  - type: dropdown
+    id: injection_method
+    attributes:
+      label: Injection Method
+      options:
+        - TrollFools (TrollStore)
+        - Jailbreak (ElleKit / Cydia Substrate)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Problem
+      description: What happened? Does it crash during pairing, or is there a specific feature not working?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Crash Report (.ips / idevicesyslog)
+      description: Please paste any relevant crash logs or syslog snippets here.
